@@ -1,22 +1,27 @@
 {
-    "name": "fecth",
-    "description": "Working with node-fetch in JavaScript",
-    "homepage": "http://github.com/Savolus/fetch-studing",
-    "keywords": [
-        "fetch",
-        "node-fetch",
-        "readline"
-    ],
-    "author": "Mykola Dorohyi <n.dorohyi@gmail.com>",
-    "contributors": [],
-    "dependencies": [
-        "node-fetch",
-        "readline"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/Savolus/fetch-studing.git"
-    },
-    "main": "script.js",
-    "version": "1.0.0"
+  "name": "fetch-studing",
+  "version": "1.0.0",
+  "description": "Studing fetching",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Savolus/fetch-studing.git"
+  },
+  "keywords": [
+    "node-fetch",
+    "readline"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Savolus/fetch-studing/issues"
+  },
+  "homepage": "https://github.com/Savolus/fetch-studing#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "readline": "^1.3.0"
+  }
 }
