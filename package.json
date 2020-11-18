@@ -1,0 +1,22 @@
+{
+    "name": "fecth",
+    "description": "Working with node-fetch in JavaScript",
+    "homepage": "http://github.com/Savolus/fetch-studing",
+    "keywords": [
+        "fetch",
+        "node-fetch",
+        "readline"
+    ],
+    "author": "Mykola Dorohyi <n.dorohyi@gmail.com>",
+    "contributors": [],
+    "dependencies": [
+        "node-fetch",
+        "readline"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/Savolus/fetch-studing.git"
+    },
+    "main": "script.js",
+    "version": "1.0.0"
+}
