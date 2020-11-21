@@ -1,49 +1,49 @@
 const fetch = require('node-fetch')  // <--- Use it for node.js
-const askQuestion = require('./askQuestion')
+const askQuestion = require('./askQuestion')  // <--- Use own module form askQuestion.js
 
-// Checking way for fetching url
-function setWay(way){
-    // Correct ways
+// Function to validate inputed data
+function validateInput(path, userId) {
+    // Array of correct paths
     const correct = [
         ['post', 'comment', 'album', 'photo', 'todo', 'user'],
         ['posts', 'comments', 'albums', 'photos', 'todos', 'users']
     ]
 
-    // Check and return correct way
-    if (correct[0].includes(way)) return way + 's'  // Add s to the way to make url correct
-    if (correct[1].includes(way)) return way // Don`t add s because it is already there
+    // Validate path and user id
+    if (correct[0].includes(path)) path += 's'  // Add 's' to the path to make it correct
+    if (!correct[1].includes(path)) throw 'incorrect path!'  // Throw error in case of incorrect path
+    if (isNaN(+userId) || userId < 0) throw 'incorrect user id!'  // Throw error in case of incorrect user id
+
+    return [path, +userId]  // Return array for destructing it on path and user id after
 }
 
-// Function that fetch url by data way and id
-async function fetchTODO(way, id){
+// Function that fetch url by data path and user id
+async function fetchTODO(pathInput, userIdIput){
     try {
         console.log('Fetch todo started...')  // Started a server dialogue
 
-        way = setWay(way)  // Set correct way if it needs
-        if (!way) throw 'incorrect way!'  // Throw error in case of incorrect way
-        if (id < 0 || isNaN(+id)) throw 'incorrect id!'  // Throw error in case of incorrect id
-
-        const url = `https://jsonplaceholder.typicode.com/${way}/${id}`  // Create url by data way and id
+        const [path, userId] = validateInput(pathInput, userIdIput)  // Get correct path and user id
+        const url = `https://jsonplaceholder.typicode.com/${path}/${userId}`  // Create url by data`s path and id
         const response = await fetch(url)  // Fetching the ulr
         const data = await response.json()  // Getting date from json
+        const output = JSON.stringify(data, null, 2)  // Stringify data to the output
 
-        if (JSON.stringify(data) === '{}') throw `${way} doesn\`t contain this data!`  // Throw error in case of empty data
+        if (output === '{}') throw `${url} doesn\`t contain data`  // Throw error in case of empty data
 
-        console.log('Data:')  // Console log the data
-        console.log(data)  // Console log the data follow by new line
-        console.log('Fetch todo ended.')  // End a server dialogue
+        console.log(`Data:\n${output}`)  // Output data
+        console.log('Fetch todo ended!')  // End a server dialogue
     } catch(error) {
-        console.error(`Error: ${error}`)  // Catching error
+        console.error(`Error: ${error}`)  // Output catched error
         console.error('Fetch todo stopped!')  // End a server dialogue with error
     }
 }
 
 // Main function for asking question and call fetch
 async function main() {
-    const way = await askQuestion('Input what data you need: ') // Getting way from console
-    const id = await askQuestion(`Input id of ${way}: `) // Getting id from console
+    const path = await askQuestion('Input what data you need: ') // Getting path from console
+    const userId = await askQuestion(`Input id of ${path}: `) // Getting user id from console
 
-    await fetchTODO(way, id)  // Start fetching by data way and id
+    await fetchTODO(path, userId)  // Start fetching by data path and user id
 }
 
 main()  // Call async main function for fetching url

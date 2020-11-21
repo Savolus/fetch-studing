@@ -11,8 +11,8 @@ function askQuestion(question) {
     // Return a new promise with question --> answer
     return new Promise(resolve => {
         rl.question(question, answer => {
-            resolve(answer)
-            rl.close()
+            resolve(answer)  // Resolve user answer
+            rl.close()  // Close console
         })
     })
 }
