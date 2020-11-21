@@ -4,7 +4,8 @@
   "description": "Studing fetching",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "end": "rm -rf node_modules package-lock.json"
   },
   "repository": {
     "type": "git",
