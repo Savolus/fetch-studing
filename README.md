@@ -2,10 +2,9 @@
 
 ### Instalation
 
+Clone repository:
 ```
 git clone https://github.com/Savolus/fetch-studing
-cd fetch-studing
-npm i
 ```
 
 ### How to use
@@ -14,7 +13,7 @@ Run: `npm run start`
 
 Usage: 
 ```
-Input what data you need: posts | comments | albums | photos | todos | users
+Input what data you need: post | comment | album | photo | todo | user | [support postfix 's']
 Input id of data: (number)
 ```
 
@@ -24,8 +23,8 @@ Run: `npm run start`
 
 Than input data what you need:
 ```
-Input what data you need: post
-Input id of post: 4
+Input what data you need: user
+Input id of user: 3
 ```
 
 Output will be:
@@ -33,11 +32,27 @@ Output will be:
 Fetch todo started...
 Data:
 {
-  "userId": 1,
-  "id": 4,
-  "title": "eum et est occaecati",
-  "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi 
-nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+  "id": 3,
+  "name": "Clementine Bauch",
+  "username": "Samantha",
+  "email": "Nathan@yesenia.net",
+  "address": {
+    "street": "Douglas Extension",
+    "suite": "Suite 847",
+    "city": "McKenziehaven",
+    "zipcode": "59590-4157",
+    "geo": {
+      "lat": "-68.6102",
+      "lng": "-47.0653"
+    }
+  },
+  "phone": "1-463-123-4447",
+  "website": "ramiro.info",
+  "company": {
+    "name": "Romaguera-Jacobson",
+    "catchPhrase": "Face to face bifurcated interface",
+    "bs": "e-enable strategic applications"
+  }
 }
 Fetch todo ended!
 ```
