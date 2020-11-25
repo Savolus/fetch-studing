@@ -14,7 +14,7 @@
     "node-fetch",
     "readline"
   ],
-  "author": "",
+  "author": "Mykola Dorohyi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Savolus/fetch-studing/issues"
