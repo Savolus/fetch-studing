@@ -1,4 +1,4 @@
-# This is a project for learning basic knowledge and using of fetch
+# This is a project for learning basics of fetch
 
 ### Instalation
 
