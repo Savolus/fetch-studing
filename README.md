@@ -1,34 +1,23 @@
 # This is a project for learning basics of fetch
 
-### Instalation
+## Usage
 
-Clone repository:
-```bash
-git clone https://github.com/Savolus/fetch-studing
-```
-
-### How to use
-
-Run:
+Runing:
 ```bash
 npm run start
 ```
 
-Usage: 
+Inputing data: 
 ```bash
 Input what data you need: post | comment | album | photo | todo | user | [support postfix 's']
 Input id of data: (number)
 ```
 
-### Example
+## Example
 
-Run:
+Input path and user id to fetch data by this path. \
+Let's fetch `user` with user id `3`:
 ```bash
-npm run start
-``` 
-
-Than input data what you need:
-```
 Input what data you need: user
 Input id of user: 3
 ```
@@ -63,6 +52,6 @@ Data:
 Fetch todo ended!
 ```
 
-### Bugs
+## Bugs
 
 If you find a bug -> just tell me in https://github.com/Savolus/fetch-studing/issues
