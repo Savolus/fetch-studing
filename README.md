@@ -3,23 +3,29 @@
 ### Instalation
 
 Clone repository:
-```
+```bash
 git clone https://github.com/Savolus/fetch-studing
 ```
 
 ### How to use
 
-Run: `npm run start` 
+Run:
+```bash
+npm run start
+```
 
 Usage: 
-```
+```bash
 Input what data you need: post | comment | album | photo | todo | user | [support postfix 's']
 Input id of data: (number)
 ```
 
 ### Example
 
-Run: `npm run start` 
+Run:
+```bash
+npm run start
+``` 
 
 Than input data what you need:
 ```
@@ -28,7 +34,7 @@ Input id of user: 3
 ```
 
 Output will be:
-```
+```bash
 Fetch todo started...
 Data:
 {
