@@ -1,29 +1,29 @@
-# This is a project for learning basics of fetch
+# Leraning fetch 🖱
 
-## Usage
+## Usage ⌨️
 
-Runing:
-```bash
+Run test:
+```
 npm run start
 ```
 
-Inputing data: 
-```bash
+Input following data: 
+```
 Input what data you need: post | comment | album | photo | todo | user | [support postfix 's']
 Input id of data: (number)
 ```
 
-## Example
+## Example 🖥
 
-Input path and user id to fetch data by this path. \
+Input following data to fetch it by this path. \
 Let's fetch `user` with user id `3`:
-```bash
+```
 Input what data you need: user
 Input id of user: 3
 ```
 
-Output will be:
-```bash
+Output of following input will be:
+```json
 Fetch todo started...
 Data:
 {
@@ -52,6 +52,6 @@ Data:
 Fetch todo ended!
 ```
 
-## Bugs
+## Bugs 🐛
 
-If you find a bug -> just tell me in https://github.com/Savolus/fetch-studing/issues
+If You found some kind of bugs then just tell it in the [issues](https://github.com/Savolus/fetch-studing/issues)
