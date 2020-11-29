@@ -1,7 +1,7 @@
 {
   "name": "fetch-studing",
   "version": "1.0.0",
-  "description": "Studing fetching",
+  "description": "Learning how to work with fetch, async-await and readline",
   "main": "index.js",
   "scripts": {
     "start": "node ."
@@ -15,7 +15,7 @@
     "readline"
   ],
   "author": "Mykola Dorohyi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Savolus/fetch-studing/issues"
   },
