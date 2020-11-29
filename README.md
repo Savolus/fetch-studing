@@ -1,4 +1,4 @@
-# Leraning fetch 🖱
+# Fetch 🖱
 
 ## Usage ⌨️
 
